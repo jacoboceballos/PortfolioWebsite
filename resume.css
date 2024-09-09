@@ -6,21 +6,10 @@
 }
 
 html, body {
-    height: 100%; /* Ensure the body takes up the full height */
-    display: flex;
-    flex-direction: column;
-}
-
-body {
+    height: 100%;
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     background-color: #f4f7f6;
     color: #333;
-}
-
-/* Content wrapper to push the footer to the bottom */
-main {
-    flex: 1; /* This will push the footer to the bottom */
 }
 
 header {
@@ -50,39 +39,21 @@ nav ul li a:hover {
     color: #f39c12;
 }
 
-#intro {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('your-image-url.jpg') center/cover no-repeat;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-#intro h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-#intro p {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-#about {
+/* Resume Section */
+#resume {
     padding: 60px 20px;
     background-color: #fff;
+    text-align: center;
 }
 
-#about h2 {
-    text-align: center;
+#resume h2 {
     font-size: 2.5rem;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     position: relative;
 }
 
-#about h2::after {
+#resume h2::after {
     content: "";
     width: 100px;
     height: 4px;
@@ -93,20 +64,24 @@ nav ul li a:hover {
     bottom: -10px;
 }
 
-#about p {
-    max-width: 900px;
+/* Embed PDF */
+iframe {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
+    display: block;
+    height: 700px; /* Adjust the height as needed */
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
+    margin-top: 40px;
 }
 
 footer a {
@@ -121,19 +96,11 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #intro h1 {
-        font-size: 2.5rem;
-    }
-
-    #intro p {
-        font-size: 1.2rem;
-    }
-
-    #about h2 {
+    #resume h2 {
         font-size: 2rem;
     }
 
-    #about p {
-        font-size: 1rem;
+    iframe {
+        height: 500px; /* Adjust height for smaller screens */
     }
 }
